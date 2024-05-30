@@ -19,6 +19,7 @@ import {
   Linking,
   ListRenderItem,
   SafeAreaView,
+  ScrollView,
   StatusBar,
   StyleSheet,
   Text,
@@ -190,7 +191,7 @@ const Detail: FunctionComponent<any> = ({
   },
 }) => {
   return (
-    <View style={{padding: 10}}>
+    <ScrollView style={{padding: 10, flex: 1,}}>
       <Text style={{color: 'green', fontSize: 16, fontWeight: '500'}}>
         {value.title}
       </Text>
@@ -221,7 +222,8 @@ const Detail: FunctionComponent<any> = ({
           sdt: {value.short_conten}
         </Text>
       </TouchableOpacity>
-    </View>
+      <View style={{height: 40}}></View>
+    </ScrollView>
   );
 };
 
