@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "851155407854",
+    "firebase_url": "https://newpaper-25148-default-rtdb.firebaseio.com",
+    "project_id": "newpaper-25148",
+    "storage_bucket": "newpaper-25148.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851155407854:android:6926982f942430fcf1f4ff",
+        "android_client_info": {
+          "package_name": "com.cli6"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvUjDhPD7PvkZrrwDGEjnZoYZelYfrEa8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851155407854:android:55e46412fef8e9b9f1f4ff",
+        "android_client_info": {
+          "package_name": "com.nha"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvUjDhPD7PvkZrrwDGEjnZoYZelYfrEa8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
