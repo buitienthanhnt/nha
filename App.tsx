@@ -105,6 +105,7 @@ function Section({
 // @ts-ignore
 function Home({navigation}): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+  const [fi, setFi] = useState(false);
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -130,6 +131,8 @@ function Home({navigation}): React.JSX.Element {
           });
           setData(_data.reverse()); // đảo ngược thứ tự data
         }
+        console.log('........... change Fi');
+        setFi(true);
       });
 
     return () => database().ref('newpaper/home').off('value', onData);
@@ -153,6 +156,14 @@ function Home({navigation}): React.JSX.Element {
     },
     [navigation],
   );
+
+  if (!fi) {
+    return (
+      <View>
+        <Text>Đang tìm kiếm thông tin</Text>
+      </View>
+    );
+  }
 
   return (
     <SafeAreaView style={backgroundStyle}>
@@ -191,7 +202,7 @@ const Detail: FunctionComponent<any> = ({
   },
 }) => {
   return (
-    <ScrollView style={{padding: 10, flex: 1,}}>
+    <ScrollView style={{padding: 10, flex: 1}}>
       <Text style={{color: 'green', fontSize: 16, fontWeight: '500'}}>
         {value.title}
       </Text>
@@ -222,7 +233,7 @@ const Detail: FunctionComponent<any> = ({
           sdt: {value.short_conten}
         </Text>
       </TouchableOpacity>
-      <View style={{height: 40}}></View>
+      <View style={{height: 40}} />
     </ScrollView>
   );
 };
